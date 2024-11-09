@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'tasker/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'tasker/css/mediaStyle.css' %}">
+    <title>Test Page</title>
+    
+    
+</head>
+<body>
+    <header>
+        <button class="left_side_button">Войти</button>
+        <h4 class="header_title">Вы не вошли в аккаунт</h4>
+    </header>
+    <div class="dateRow">
+        <h4 class="centeredElement">Текущая дата:xxxxx</h4>
+        {% load static %}
+        <button class="emptyButton"> <img src="{% static 'tasker/images/calendar.svg' %}" alt="Calendar"></button>
+    </div>
+    <div class="tableContainer">
+        <table class="eventsTable">
+            <thead>
+                <th>Название</th>
+                <th>Срок сдачи</th>
+                <th>Приоритет</th>
+                <th>Описание</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Тестовое событие 1</td>
+                    <td>24.10.2024</td>
+                    <td>2</td>
+                    <td>не забыть паспортorefngoenjgrelksrgnkelngkerngk</td>
+                </tr>
+                <tr>
+                    <td>Тестовое событие 1</td>
+                    <td>24.10.2024</td>
+                    <td>2</td>
+                    <td>не забыть паспортorefngoenjgrelksrgnkelngkerngk</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="addEvent">Добавить событие</button>
+</body>
+</html>

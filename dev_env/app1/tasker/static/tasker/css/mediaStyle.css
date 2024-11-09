@@ -1,0 +1,19 @@
+@media (max-width:1080px){
+    .tableContainer{
+        max-height: 40vh;
+    }
+    .button_icon:hover{
+        opacity: 100%;
+    }
+    .left_side_button:hover{
+        background-color: #842224;
+    }
+    .addEvent:hover{
+        background-color: aquamarine;
+    }
+}
+@media(orientation:landscape){
+    .tableContainer{
+        max-height: 30vh;
+    }
+}

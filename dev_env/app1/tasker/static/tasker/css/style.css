@@ -1,0 +1,95 @@
+header {
+    background-color: rgb(169, 51, 53);
+    display: flex;
+    min-width: 100vw;
+    justify-content: space-between;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    font-size: large;
+    background-color: #d5e0f2;
+    box-sizing: border-box;
+}
+
+.left_side_button {
+    min-width: 5vw;
+    background-color: #842224;
+    border: none;
+    cursor: pointer;
+    margin-right: auto;
+    transition: background-color 0.3s;
+}
+.left_side_button:hover{
+    background-color: rgb(169, 51, 53);
+}
+.header_title {
+    text-align: center;
+    margin-right: auto;
+    
+}
+.dateRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.emptyButton{
+    background: none;
+    border: none;
+}
+.button_icon{
+    min-width: 5vw;
+    min-height: 5vh;
+    max-width: 10vw;
+    max-height: 10vh;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+.button_icon:hover{
+    opacity: 50%;
+}
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    max-height: 60vh;
+    max-width: 100vw;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.eventsTable{
+    width: 100vw;
+    background-color: beige;
+    border-collapse: collapse;
+}
+.eventsTable::after{
+    content: "";
+    display: flex;
+    height: 5vh;
+}
+td{
+    border: 1px solid black;
+}
+.eventsTable th {
+    top:0;
+    position: sticky;
+    background-color: #e0e094;
+}
+
+.centeredElement{
+    text-align: center;
+    margin-left:50%;
+    margin-right:auto;
+}
+.addEvent{
+    position: relative;
+    left: 50vw;
+    right: 50vw;
+    top: 3vh;
+    transition: background-color 0.3s;
+    min-height: 5vh;
+    min-width: 6vw;
+    background-color: aquamarine;
+}
+.addEvent:hover{
+    background-color: darkcyan;
+}
