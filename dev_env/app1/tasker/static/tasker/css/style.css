@@ -40,8 +40,6 @@ body{
 .button_icon{
     min-width: 5vw;
     min-height: 5vh;
-    max-width: 10vw;
-    max-height: 10vh;
     transition: opacity 0.3s;
     cursor: pointer;
 }
