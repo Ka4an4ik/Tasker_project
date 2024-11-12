@@ -1,93 +1,121 @@
 header {
-    background-color: rgb(169, 51, 53);
+    background-color: #A61000;
     display: flex;
-    min-width: 100vw;
     justify-content: space-between;
-}
-body{
-    height: 100vh;
-    width: 100vw;
-    font-size: large;
-    background-color: #d5e0f2;
-    box-sizing: border-box;
+    padding: 5px;
+    min-height: 5%;
+    width:100vw;
+    margin:0;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+    font-size: larger;
+    cursor: default;
+    background-color: #259433;
+    box-sizing: border-box;
+    margin: 0;
+}
+h4 {
+    margin:5px;
+}
 .left_side_button {
-    min-width: 5vw;
-    background-color: #842224;
+    background-color: #BF3D30;
+    min-width: 5%;
+    margin-right:auto;
     border: none;
     cursor: pointer;
-    margin-right: auto;
     transition: background-color 0.3s;
 }
-.left_side_button:hover{
-    background-color: rgb(169, 51, 53);
+
+.left_side_button:hover {
+    background-color: #FF7A73;
 }
+
 .header_title {
     text-align: center;
-    margin-right: auto;
-    
+    flex-grow: 1;
 }
-.dateRow{
+
+.dateRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
-.emptyButton{
+
+.emptyButton {
     background: none;
     border: none;
 }
-.button_icon{
+
+.button_icon {
     min-width: 5vw;
     min-height: 5vh;
     transition: opacity 0.3s;
     cursor: pointer;
 }
-.button_icon:hover{
+
+.button_icon:hover {
     opacity: 50%;
 }
-.tableContainer{
+.tableContainer {
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
     max-height: 60vh;
     max-width: 100vw;
     overflow-y: auto;
     overflow-x: auto;
+    margin-top: 20px;
 }
-.eventsTable{
+.eventsTable {
     width: 100vw;
-    background-color: beige;
+    background-color: #FFE040;
     border-collapse: collapse;
 }
-.eventsTable::after{
-    content: "";
-    display: flex;
-    height: 5vh;
-}
-td{
+
+.eventsTable th, td {
     border: 1px solid black;
+    max-width: 5%;
+    cursor: pointer;
+    padding: 8px;
+    text-align: left;
+    overflow:auto;
 }
 .eventsTable th {
-    top:0;
+    top: 0;
     position: sticky;
-    background-color: #e0e094;
+    background-color: #A68B00;
 }
 
-.centeredElement{
+.centeredElement {
     text-align: center;
-    margin-left:50%;
-    margin-right:auto;
+    flex-grow: 1;
 }
-.addEvent{
+
+.addEvent {
     position: relative;
-    left: 50vw;
-    right: 50vw;
-    top: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
     transition: background-color 0.3s;
     min-height: 5vh;
     min-width: 6vw;
-    background-color: aquamarine;
+    background-color: #6D48D7;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
 }
-.addEvent:hover{
-    background-color: darkcyan;
+
+.addEvent:hover {
+    background-color: #8A6ED7;
+}
+textarea {
+    background-color: #FFE873;
+    width: 100vw;
+    height: 60%;
+    padding: 4px;
+    margin:0;
 }
