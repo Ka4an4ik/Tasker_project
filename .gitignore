@@ -7,3 +7,15 @@ __pycache__/
 
 db.sqlite3
 
+dev_env/app1/app/__pycache__/wsgi.cpython-311.pyc
+dev_env/app1/app/__pycache__/__init__.cpython-311.pyc
+dev_env/app1/app/__pycache__/settings.cpython-311.pyc
+dev_env/app1/app/__pycache__/urls.cpython-311.pyc
+dev_env/app1/tasker/__pycache__/__init__.cpython-311.pyc
+dev_env/app1/tasker/__pycache__/admin.cpython-311.pyc
+dev_env/app1/tasker/__pycache__/apps.cpython-311.pyc
+dev_env/app1/tasker/__pycache__/models.cpython-311.pyc
+dev_env/app1/tasker/migrations/__pycache__/0001_initial.cpython-311.pyc
+dev_env/app1/tasker/migrations/__pycache__/0002_delete_question.cpython-311.pyc
+dev_env/app1/tasker/migrations/__pycache__/__init__.cpython-311.pyc
+dev_env/venv/lib/python3.11/site-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc
