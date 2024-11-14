@@ -1,21 +1,74 @@
-.DS_Store
-.pylitrc
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
 
-.vscode
-.idea
-
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
 db.sqlite3
 
-dev_env/app1/app/__pycache__/wsgi.cpython-311.pyc
-dev_env/app1/app/__pycache__/__init__.cpython-311.pyc
-dev_env/app1/app/__pycache__/settings.cpython-311.pyc
-dev_env/app1/app/__pycache__/urls.cpython-311.pyc
-dev_env/app1/tasker/__pycache__/__init__.cpython-311.pyc
-dev_env/app1/tasker/__pycache__/admin.cpython-311.pyc
-dev_env/app1/tasker/__pycache__/apps.cpython-311.pyc
-dev_env/app1/tasker/__pycache__/models.cpython-311.pyc
-dev_env/app1/tasker/migrations/__pycache__/0001_initial.cpython-311.pyc
-dev_env/app1/tasker/migrations/__pycache__/0002_delete_question.cpython-311.pyc
-dev_env/app1/tasker/migrations/__pycache__/__init__.cpython-311.pyc
-dev_env/venv/lib/python3.11/site-packages/_distutils_hack/__pycache__/__init__.cpython-311.pyc
+
+# Ignore local environment settings
+.env
+*.env
+
+# Local development
+.vscode/
+.idea/
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+
+# Ignore virtual environments
+venv/
+env/
+.venv/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore macOS specific files
+*.DS_Store
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+*.cover
+*.coverage.*
+
+# Ignore testing and CI files
+.tox/
+.pytest_cache/
+.nox/
+
+# Ignore build files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+
+# Ignore pycache and cache files
+__pycache__/
+.cache/
+local_cache/
+*.pyo
+
+# Ignore other editor or OS specific files
+Thumbs.db
+ehthumbs.db
