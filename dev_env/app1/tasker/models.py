@@ -3,12 +3,10 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 
 
-
 class User(models.Model):
 
-    user_id = models.SmallIntegerField(primary_key=True, unique=True)
-    user_name = models.CharField(max_length=50)
-
+    user_id = models.AutoField(primary_key=True)
+    user_name = models.CharField(max_length=50)   
     tasks = models.ManyToManyField("Task", through="User_Task")
 
     def __str__(self):
@@ -17,7 +15,7 @@ class User(models.Model):
 
 class Task(models.Model):
 
-    task_id = models.SmallIntegerField(primary_key=True, unique=True)
+    task_id = models.AutoField(primary_key=True)
     task_name = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
     creation_time = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -33,13 +31,11 @@ class Task(models.Model):
             raise ValidationError("Дедлайн не может быть в прошлом.")
 
 
-
-
 class User_Task(models.Model):
+
 
     foreign_user_id = models.ForeignKey("User", on_delete=models.PROTECT)
     foreign_task_id = models.ForeignKey("Task", on_delete=models.PROTECT)
-
 
     def __str__(self):
         return f"{self.foreign_user_id} - {self.foreign_task_id}"
