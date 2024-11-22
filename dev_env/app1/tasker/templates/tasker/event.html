@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="styles.css" >
-    <link rel="stylesheet" href="mediaStyles.css">
-    <title>Test Event</title>
-    
+    <link rel="stylesheet" href="{% static 'tasker/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'tasker/css/mediaStyle.css' %}">
+    <title>{{ task.task_name }}</title>
 </head>
 <body>
     <header>
-        <button  class="left_side_button" onclick="window.location.href='index.html'"> Вернуться назад</button>
-        <h4 class="centeredElement"> Текущая задача</h4>
-        <h4>Осталось времени: (указать прямо здесь хз)</h4>
+        <button class="left_side_button" onclick="window.location.href='{% url 'tasker:index' %}'">Вернуться назад</button>
+        <h4 class="centeredElement">{{ task.task_name }}</h4>
+        <h4>Дедлайн: {{ task.deadline_time|date:"d.m.Y H:i" }}</h4>
+        <h4>Приоритет: {{ task.priority }}</h4>
     </header>
-    <textarea placeholder="Здесь пусто, возможно добавим редактирование задачи здесь"></textarea>
+    <div>
+        <p>{{ task.task_name }}</p>
+        <h4>Готовность: {{ task.readiness|yesno:"Да,Нет" }}</h4>
+    </div>
+    <textarea placeholder="Изменить описание задачи">{{ task.description }}</textarea>
     <button class="addEvent">Сохранить изменения</button>
 </body>
 </html>

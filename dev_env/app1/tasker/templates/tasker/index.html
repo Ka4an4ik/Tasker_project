@@ -30,13 +30,13 @@
                 <th>Описание</th>
             </thead>
             <tbody>
-                {% for task in task_list  %}
-                <tr onclick="window.location='event.html'">
-                    <td>{{ task.task_name }}</td>
-                    <td>{{ task.deadline_time|date:"d.m.Y H:i" }}</td>
-                    <td>{{ task.priority }}</td>
-                    <td>{{ task.description }}</td>
-                </tr>
+                {% for task in task_list %}
+                    <tr onclick="window.location.href='{% url 'tasker:view_task' task.task_id %}'">
+                        <td>{{ task.task_name }}</td>
+                        <td>{{ task.deadline_time|date:"d.m.Y H:i" }}</td>
+                        <td>{{ task.priority }}</td>
+                        <td>{{ task.description }}</td>
+                    </tr>
                 {% endfor %}
             </tbody>
         </table>
