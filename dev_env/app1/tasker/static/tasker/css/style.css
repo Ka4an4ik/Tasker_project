@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400&display=swap');
+
 header {
     background-color: #A61000;
     display: flex;
@@ -6,16 +8,24 @@ header {
     min-height: 5%;
     width:100vw;
     margin:0;
+
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
     width: 100vw;
     font-size: larger;
     cursor: default;
-    background-color: #259433;
+    background-color: #527fcc;
     box-sizing: border-box;
     margin: 0;
+    
+}
+tbody {
+    font-family: 'Roboto', sans-serif;
+    
+    font-size: 22px; /* Настройте размер шрифта при необходимости */
 }
 h4 {
     margin:5px;
@@ -96,6 +106,8 @@ h4 {
 }
 
 .addEvent {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -103,15 +115,16 @@ h4 {
     transition: background-color 0.3s;
     min-height: 5vh;
     min-width: 6vw;
-    background-color: #6D48D7;
+    background-color: #5b4a89;
     padding: 10px;
     border: none;
     cursor: pointer;
 }
 
 .addEvent:hover {
-    background-color: #8A6ED7;
+    background-color: #FFE873;
 }
+
 textarea {
     background-color: #FFE873;
     width: 100vw;
@@ -119,3 +132,4 @@ textarea {
     padding: 4px;
     margin:0;
 }
+
