@@ -14,3 +14,5 @@ def index(request):
 def task_view(request, task_id):
     task = get_object_or_404(Task, task_id=task_id) 
     return render(request, "tasker/event.html", {"task": task})  
+def task_create(request):
+    return render(request,"tasker/creatingTask.html")
