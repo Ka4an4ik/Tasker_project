@@ -32,10 +32,12 @@
     <div class="tableContainer">
         <table class="eventsTable">
             <thead>
-                <th>Название</th>
-                <th>Срок сдачи</th>
-                <th>Приоритет</th>
-                <th>Описание</th>
+                <tr>
+                    <th>Название</th>
+                    <th>Срок сдачи</th>
+                    <th>Приоритет</th>
+                    <th>Описание</th>
+                </tr>
             </thead>
             <tbody>
                 {% for task in task_list %}
@@ -49,6 +51,6 @@
             </tbody>
         </table>
     </div>
-    <button class="addEvent">Добавить событие</button>
+    <a href="'{% url 'tasker:creating_task' %}'"><button onclick="window.location.href=" class="addEvent">Добавить событие</button></a>
 </body>
 </html>

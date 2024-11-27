@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{% static 'tasker/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'tasker/css/mediaStyle.css' %}">
+    <title>{{ task.task_name }}</title>
+</head>
+<body>
+    <header>
+        <button class="left_side_button" onclick="window.location.href='{% url 'tasker:index' %}'">Вернуться назад</button>
+    </header>
+ 
+        <form class="formToFill">
+            <div class="containerForForm">
+                <label>
+                    <span>Имя задачи</span>
+                    <input class="taskInput">
+                </label>
+            </div>
+            <hr>
+            <div class="containerForForm">
+                <label>
+                    <span>Описание</span>
+                    <textarea class="DescriptionToAdd"></textarea>    
+                </label>
+            </div>
+            <hr>
+            <div class="containerForForm">
+                <label>
+                    <span>Важность задачи</span>
+                    <input class='taskInput' type="date">
+                </label>
+            </div>
+            <hr>
+            <div class="containerForForm">
+                <label>
+                    <span>День окончания</span>
+                    <input class='taskInput' type="number">
+                </label>
+            </div>
+            <hr>
+            <div class="containerForForm">
+                <button class="addEvent">Добавить задачу</button>
+            </div>
+                
+        </form>
+
+
+</body>

@@ -19,7 +19,7 @@
         <p>{{ task.task_name }}</p>
         <h4>Готовность: {{ task.readiness|yesno:"Да,Нет" }}</h4>
     </div>
-    <textarea placeholder="Изменить описание задачи">{{ task.description }}</textarea>
+    <textarea class="DescriptionToRedact" placeholder="Изменить описание задачи">{{ task.description }}</textarea>
     <button class="addEvent">Сохранить изменения</button>
 </body>
 </html>
