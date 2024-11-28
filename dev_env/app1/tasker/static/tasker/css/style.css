@@ -128,7 +128,7 @@ h4 {
 .DescriptionToRedact {
     background-color: #FFE873;
     width: 100vw;
-    height: 60%;
+    min-height: 60%;
     padding: 4px;
     margin:0;
 }
