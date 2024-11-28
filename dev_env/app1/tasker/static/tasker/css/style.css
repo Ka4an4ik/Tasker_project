@@ -140,7 +140,7 @@ h4 {
 .DescriptionToAdd {
     background-color: #FFE873;
     width: 30vw;
-    height: 60%;
+    min-height: 60%;
     padding: 4px;
     margin:0;
 }
