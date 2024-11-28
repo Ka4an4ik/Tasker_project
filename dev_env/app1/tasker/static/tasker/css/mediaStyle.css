@@ -1,7 +1,4 @@
 @media (max-width:1080px){
-    .tableContainer{
-        max-height: 40vh;
-    }
     .button_icon:hover{
         opacity: 100%;
     }
@@ -13,10 +10,5 @@
     }
     body {
         font-size: medium;
-    }
-}
-@media(orientation:landscape){
-    .tableContainer{
-        max-height: 30vh;
     }
 }
