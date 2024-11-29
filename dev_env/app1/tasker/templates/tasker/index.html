@@ -21,7 +21,9 @@
 </head>
 <body>
     <header>
-        <button class="left_side_button">Войти</button>
+        <a href="{% url 'tasker:register' %}">
+            <button class="left_side_button">Войти</button>
+        </a>
         <h4 class="header_title">*Статус входа в аккаунт*</h4>
     </header>
     <div class="dateRow">

@@ -124,9 +124,10 @@ USE_TZ = True
 
 LANGUAGE_CODE = 'en-us'
 
+LOGIN_REDIRECT_URL = 'index'  
+LOGOUT_REDIRECT_URL = 'index' 
 
-
-
+AUTH_USER_MODEL = 'tasker.User'
 
 
 # Static files (CSS, JavaScript, Images)
