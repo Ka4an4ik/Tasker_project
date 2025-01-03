@@ -8,18 +8,14 @@ class User(AbstractUser):
 
     id = models.AutoField(primary_key=True)
     username = models.CharField(
-        max_length=50,
-        unique=False,
-        blank=False,
-        null=False,
-        verbose_name="Username"
+        max_length=50, unique=False, blank=False, null=False, verbose_name="Username"
     )
     email = models.EmailField(unique=True, blank=False, null=False)
     tasks = models.ManyToManyField("Task", through="User_Task")
 
     groups = models.ManyToManyField(
         "auth.Group",
-        related_name="tasker_user_groups",  
+        related_name="tasker_user_groups",
         blank=True,
         help_text=(
             "The groups this user belongs to. A user will get all permissions "
@@ -29,14 +25,14 @@ class User(AbstractUser):
     )
     user_permissions = models.ManyToManyField(
         "auth.Permission",
-        related_name="tasker_user_permissions",  
+        related_name="tasker_user_permissions",
         blank=True,
         help_text="Specific permissions for this user.",
         verbose_name="user permissions",
     )
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["username"]
 
     def __str__(self):
         return self.username
@@ -61,7 +57,6 @@ class Task(models.Model):
 
 
 class User_Task(models.Model):
-
 
     foreign_user_id = models.ForeignKey("User", on_delete=models.PROTECT)
     foreign_task_id = models.ForeignKey("Task", on_delete=models.PROTECT)
