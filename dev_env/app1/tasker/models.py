@@ -1,45 +1,16 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 
 
-class User(AbstractUser):
+class User(models.Model):
 
-    id = models.AutoField(primary_key=True)
-    username = models.CharField(
-        max_length=50,
-        unique=False,
-        blank=False,
-        null=False,
-        verbose_name="Username"
-    )
-    email = models.EmailField(unique=True, blank=False, null=False)
+    user_id = models.AutoField(primary_key=True)
+    user_name = models.CharField(max_length=50)   
     tasks = models.ManyToManyField("Task", through="User_Task")
 
-    groups = models.ManyToManyField(
-        "auth.Group",
-        related_name="tasker_user_groups",  
-        blank=True,
-        help_text=(
-            "The groups this user belongs to. A user will get all permissions "
-            "granted to each of their groups."
-        ),
-        verbose_name="groups",
-    )
-    user_permissions = models.ManyToManyField(
-        "auth.Permission",
-        related_name="tasker_user_permissions",  
-        blank=True,
-        help_text="Specific permissions for this user.",
-        verbose_name="user permissions",
-    )
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
-
     def __str__(self):
-        return self.username
+        return self.user_name
 
 
 class Task(models.Model):
