@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 class User(models.Model):
 
     user_id = models.AutoField(primary_key=True)
-    user_name = models.CharField(max_length=50)   
+    user_name = models.CharField(max_length=50)
     tasks = models.ManyToManyField("Task", through="User_Task")
 
     def __str__(self):
@@ -32,7 +32,6 @@ class Task(models.Model):
 
 
 class User_Task(models.Model):
-
 
     foreign_user_id = models.ForeignKey("User", on_delete=models.PROTECT)
     foreign_task_id = models.ForeignKey("Task", on_delete=models.PROTECT)

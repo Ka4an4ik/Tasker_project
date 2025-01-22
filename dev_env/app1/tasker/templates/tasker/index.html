@@ -20,10 +20,17 @@
     
 </head>
 <body>
-    <header>
-        <button class="left_side_button">Войти</button>
-        <h4 class="header_title">*Статус входа в аккаунт*</h4>
+    
+    <header >
+        {% if user.is_authenticated %}
+            <h4 class="header_title">Привет, {{user.username}}</h4>
+            <button class="left_side_button" onclick="window.location.href='{% url "logout" %}'">Выйти</button>
+        {% else %}
+            <button class="left_side_button" onclick="window.location.href='{% url "login" %}'">Войти</button>
+            <h4 class="header_title">Не произведен вход в аккаунт</h4>
+        {% endif %}        
     </header>
+
     <div class="dateRow">
         <h4 class="centeredElement">Текущая дата и время: {{ current_time|date:"d.m.Y H:i" }}</h4>
         {% load static %}
@@ -50,7 +57,7 @@
                 {% endfor %}
             </tbody>
         </table>
-        <a href="'{% url 'tasker:creating_task' %}'"><button onclick="window.location.href=" class="addEvent">Добавить событие</button></a>
+        <a href="{% url "tasker:creating_task" %}"><button onclick="window.location.href=" class="addEvent">Добавить событие</button></a>
     </div>
 
 </body>

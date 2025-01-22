@@ -6,5 +6,5 @@ app_name = 'tasker'
 urlpatterns = [
     path("", views.index, name="index"),  
     path("<int:task_id>/", views.task_view, name="view_task"), 
-    path("creatingTask/",views.task_create,name="creating_task") 
+    path("creatingTask/", views.task_create,name="creating_task")
 ]

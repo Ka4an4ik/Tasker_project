@@ -18,6 +18,9 @@
 {% csrf_token %}
 <table>
 
+<button href="{% url "tasker:index" %}">Кнопка для возврата в главное меню</button>
+<text>Cделать так, чтобы он не требовал обязательный ввод поля (как это сейчас)</text>
+
 <tr>
   <td>{{ form.username.label_tag }}</td>
   <td>{{ form.username }}</td>
